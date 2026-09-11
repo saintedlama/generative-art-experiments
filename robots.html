@@ -1,17 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robots</title>
+    <title>Procedural Robots - Generative Art Experiments</title>
   </head>
   <body>
     <div id="app">
-      <form class="form dialog-floating">
-        <button id="btnDownload" type="button" class="btn">Download All</button>
-      </form>
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="btn btn-secondary btn-sm btn-back"> &larr; Back to Experiments </a>
+          <div class="brand">
+            <span class="brand-icon">🤖</span>
+            <span>Procedural Robots</span>
+          </div>
+        </div>
+
+        <div class="controls-group">
+          <div class="control-item">
+            <label for="inputCount">Quantity:</label>
+            <select id="inputCount">
+              <option value="6">6 bots</option>
+              <option value="12" selected>12 bots</option>
+              <option value="24">24 bots</option>
+              <option value="48">48 bots</option>
+            </select>
+          </div>
+
+          <div class="control-item">
+            <label for="inputTheme">Palette:</label>
+            <select id="inputTheme">
+              <option value="random" selected>Random Spectrum</option>
+              <option value="cyberBlue">Cyber Blue</option>
+              <option value="neonPurple">Neon Violet</option>
+              <option value="electricLime">Acid Lime</option>
+              <option value="crimsonFire">Crimson Fire</option>
+            </select>
+          </div>
+
+          <button id="btnRegenerate" type="button" class="btn btn-secondary">↻ Regenerate <kbd>Space</kbd></button>
+          <button id="btnDownloadFirst" type="button" class="btn">↓ Download First</button>
+        </div>
+      </header>
+
+      <main>
+        <div id="robotsGrid" class="robots-grid"></div>
+      </main>
     </div>
+
     <script type="module" src="/robots.js"></script>
   </body>
 </html>

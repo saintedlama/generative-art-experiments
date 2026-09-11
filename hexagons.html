@@ -1,17 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hexagons</title>
+    <title>Hexagons - Generative Art Experiments</title>
   </head>
   <body>
     <div id="app">
-      <form class="form dialog-floating">
-        <button id="btnDownload" type="button" class="btn">Download</button>
-      </form>
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="btn btn-secondary btn-sm btn-back"> &larr; Back to Experiments </a>
+          <div class="brand">
+            <span class="brand-icon">⬡</span>
+            <span>Hexagons</span>
+          </div>
+        </div>
+
+        <div class="controls-group">
+          <div class="control-item">
+            <label for="inputCount">Count:</label>
+            <input id="inputCount" type="range" min="100" max="1500" step="50" value="800" />
+            <span id="countVal">800</span>
+          </div>
+
+          <div class="control-item">
+            <label for="inputSides">Sides:</label>
+            <select id="inputSides">
+              <option value="3">3 (Triangle)</option>
+              <option value="5">5 (Pentagon)</option>
+              <option value="6" selected>6 (Hexagon)</option>
+              <option value="8">8 (Octagon)</option>
+            </select>
+          </div>
+
+          <div class="control-item">
+            <label for="inputHue">Hue:</label>
+            <input id="inputHue" type="range" min="0" max="360" step="5" value="310" />
+            <span id="hueVal">310°</span>
+          </div>
+
+          <button id="btnRegenerate" type="button" class="btn btn-secondary">↻ Regenerate <kbd>Space</kbd></button>
+          <button id="btnDownload" type="button" class="btn">↓ Download SVG</button>
+        </div>
+      </header>
+
+      <main class="canvas-wrapper">
+        <div id="canvas-container"></div>
+      </main>
     </div>
+
     <script type="module" src="/hexagons.js"></script>
   </body>
 </html>

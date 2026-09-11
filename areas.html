@@ -1,17 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Areas</title>
+    <title>Gradient Area Mesh - Generative Art Experiments</title>
   </head>
-  <body style="background-color: var(--gray-1);">
+  <body>
     <div id="app">
-      <form class="form dialog-floating">
-        <button id="btnDownload" type="button" class="btn">Download</button>
-      </form>
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="btn btn-secondary btn-sm btn-back"> &larr; Back to Experiments </a>
+          <div class="brand">
+            <span class="brand-icon">▦</span>
+            <span>Gradient Area</span>
+          </div>
+        </div>
+
+        <div class="controls-group">
+          <div class="control-item">
+            <label for="inputGrid">Grid:</label>
+            <select id="inputGrid">
+              <option value="16">16 × 16</option>
+              <option value="24">24 × 24</option>
+              <option value="32" selected>32 × 32</option>
+              <option value="48">48 × 48</option>
+            </select>
+          </div>
+
+          <div class="control-item">
+            <label for="inputDeviation">Warp:</label>
+            <input id="inputDeviation" type="range" min="5" max="50" step="5" value="25" />
+            <span id="deviationVal">25px</span>
+          </div>
+
+          <div class="control-item">
+            <label for="inputPalette">Theme:</label>
+            <select id="inputPalette">
+              <option value="cyberpunk" selected>Cyberpunk</option>
+              <option value="synthwave">Synthwave</option>
+              <option value="acidMatrix">Acid Matrix</option>
+              <option value="sunset">Neon Sunset</option>
+              <option value="deepOcean">Deep Ocean</option>
+            </select>
+          </div>
+
+          <button id="btnRegenerate" type="button" class="btn btn-secondary">↻ Regenerate <kbd>Space</kbd></button>
+          <button id="btnDownload" type="button" class="btn">↓ Download SVG</button>
+        </div>
+      </header>
+
+      <main class="canvas-wrapper">
+        <div id="canvas-container"></div>
+      </main>
     </div>
+
     <script type="module" src="/areas.js"></script>
   </body>
 </html>
