@@ -179,6 +179,19 @@ textarea {
   background: linear-gradient(135deg, var(--electricIndigo), var(--electricCyan));
 }
 
+.seed-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--neonBlue);
+  user-select: all;
+}
+
 .controls-group {
   display: flex;
   align-items: center;
@@ -237,6 +250,15 @@ textarea {
   border-radius: var(--border-radius-1);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s ease;
+}
+
+.canvas-wrapper svg.pixel-canvas {
+  width: 100%;
+  max-width: 336px;
+  max-height: 735px;
+  aspect-ratio: 16 / 35;
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
 }
 
 /* Hero & Showcase Grid on Homepage */
@@ -382,6 +404,63 @@ textarea {
 }
 
 .robot-card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacer-2);
+  padding-top: var(--spacer-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Pixel Character Grid Showcase */
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--spacer-4);
+  width: 100%;
+  padding-bottom: var(--spacer-6);
+}
+
+.character-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-2);
+  padding: var(--spacer-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  position: relative;
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glass-hover);
+}
+
+.character-card-canvas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-card svg.pixel-canvas {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 16 / 35;
+  border-radius: var(--border-radius-1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}
+
+.character-card-footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
