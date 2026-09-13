@@ -9,6 +9,7 @@ export default defineConfig({
         hexagons: resolve(import.meta.dirname, "hexagons.html"),
         robots: resolve(import.meta.dirname, "robots.html"),
         areas: resolve(import.meta.dirname, "areas.html"),
+        pixelCharacters: resolve(import.meta.dirname, "pixel-characters.html"),
       },
     },
   },

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Characters - Generative Art Experiments</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="btn btn-secondary btn-sm btn-back"> &larr; Back to Experiments </a>
+          <div class="brand">
+            <span class="brand-icon">👾</span>
+            <span>Pixel Characters</span>
+            <span id="seedBadge" class="seed-badge" title="Master Seed">#----</span>
+          </div>
+        </div>
+
+        <div class="controls-group">
+          <div class="control-item">
+            <label for="inputCount">Quantity:</label>
+            <select id="inputCount">
+              <option value="8">8 chars</option>
+              <option value="16" selected>16 chars</option>
+              <option value="24">24 chars</option>
+              <option value="32">32 chars</option>
+            </select>
+          </div>
+
+          <button id="btnRegenerate" type="button" class="btn btn-secondary">↻ Regenerate <kbd>Space</kbd></button>
+          <button id="btnDownloadFirst" type="button" class="btn">↓ Download First</button>
+        </div>
+      </header>
+
+      <main>
+        <div id="charactersGrid" class="characters-grid"></div>
+      </main>
+    </div>
+
+    <script type="module" src="/pixel-characters.js"></script>
+  </body>
+</html>
