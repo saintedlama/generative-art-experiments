@@ -1,5 +1,7 @@
 # Generative Art Experiments
 
+🎮 **Live Demo:** [https://saintedlama.github.io/generative-art-experiments/](https://saintedlama.github.io/generative-art-experiments/)
+
 A modernized algorithmic SVG generative art playground built with [Vite](https://vite.dev/), [SVG.js](https://svgjs.dev/), simplex noise, and neon chromatic color spaces.
 
 ## Highlights
