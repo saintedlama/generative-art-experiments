@@ -29,6 +29,7 @@ Thank you for your interest in contributing to generative-art-experiments! We we
 This project strictly follows the [Conventional Commits](https://www.conventionalcommits.org/) specification (`<type>(<scope>): <description>`). This enables automated changelogs and semantic releases.
 
 Common types:
+
 - `feat:` introduces a new feature
 - `fix:` fixes a bug
 - `docs:` documentation changes only
@@ -37,6 +38,7 @@ Common types:
 - `chore:` maintenance, build tasks, dependency updates, or CI changes
 
 Example:
+
 ```bash
 git commit -m "feat(auth): add OAuth2 provider support"
 git commit -m "fix(api): handle timeout when calling upstream service"

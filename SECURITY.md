@@ -4,10 +4,10 @@
 
 We actively maintain and provide security updates for the latest release:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| < Latest| :x:                |
+| Version  | Supported          |
+| -------- | ------------------ |
+| Latest   | :white_check_mark: |
+| < Latest | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -18,6 +18,7 @@ Instead, please report it privately:
 - Report via [GitHub Private Vulnerability Reporting](https://github.com/saintedlama/generative-art-experiments/security/advisories/new) on this repository, or contact the project maintainers directly.
 
 Please include:
+
 - A description of the vulnerability and its potential impact.
 - Steps to reproduce the issue (proof-of-concept code or scripts where applicable).
 - Any suggested fixes or mitigations.
